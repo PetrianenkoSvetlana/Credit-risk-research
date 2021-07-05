@@ -1,0 +1,43 @@
+unit oksz;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm4 = class(TForm)
+    l5: TLabel;
+    Button1: TButton;
+    CB1: TComboBox;
+    e1: TEdit;
+    Label1: TLabel;
+    CB2: TComboBox;
+    e2: TEdit;
+    Label2: TLabel;
+    CB3: TComboBox;
+    e3: TEdit;
+    procedure CB1Change(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm4.CB1Change(Sender: TObject);
+begin
+     if CB1.ItemIndex=1 then  e1.Text:='0'
+     else  if CB1.ItemIndex=2 then  e1.Text:='1'
+     else  if CB1.ItemIndex=3 then  e1.Text:='2';
+end;
+
+end.
